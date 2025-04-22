@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Municipios de Misiones con colores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map', {
+      zoomControl: true,
+      attributionControl: false
+    });
+
+    Promise.all([
+      fetch('municipios-misiones.geojson').then(res => res.json()),
+      fetch('colores.json').then(res => res.json())
+    ])
+    .then(([geojsonData, coloresData]) => {
+      const coloresMap = new Map(
+        coloresData.map(item => [item.nombre.toLowerCase(), item.color])
+      );
+
+      const layer = L.geoJSON(geojsonData, {
+        style: feature => {
+          const nombre = feature.properties?.nombre?.toLowerCase() ?? '';
+          const color = coloresMap.get(nombre);
+          return {
+            color: '#0077cc',
+            weight: 1,
+            fill: true,
+            fillOpacity: color ? 0.6 : 0,
+            fillColor: color || 'transparent'
+          };
+        },
+        onEachFeature: (feature, layer) => {
+          const nombre = feature.properties?.nombre ?? 'Municipio';
+          layer.bindPopup(`<h3>${nombre}</h3>`);
+        }
+      }).addTo(map);
+
+      const bounds = layer.getBounds();
+      map.fitBounds(bounds);
+      map.setMaxBounds(bounds);
+    });
+  </script>
+</body>
+</html>

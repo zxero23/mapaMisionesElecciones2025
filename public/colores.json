@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "nombre": "ALBA POSSE",
+    "color": ""
+  },
+  {
+    "id": 2,
+    "nombre": "ALMAFUERTE",
+    "color": ""
+  },
+  {
+    "id": 3,
+    "nombre": "APOSTOLES",
+    "color": "GREEN"
+  },
+  {
+    "id": 4,
+    "nombre": "ARISTOBULO DEL VALLE",
+    "color": ""
+  },
+  {
+    "id": 5,
+    "nombre": "ARROYO DEL MEDIO",
+    "color": ""
+  },
+  {
+    "id": 6,
+    "nombre": "AZARA",
+    "color": "GREEN"
+  },
+  {
+    "id": 7,
+    "nombre": "BERNARDO DE IRIGOYEN",
+    "color": ""
+  },
+  {
+    "id": 8,
+    "nombre": "BOMPLAND",
+    "color": ""
+  },
+  {
+    "id": 9,
+    "nombre": "CAA-YARI",
+    "color": "GREEN"
+  },
+  {
+    "id": 10,
+    "nombre": "CAMPO GRANDE",
+    "color": ""
+  },
+  {
+    "id": 11,
+    "nombre": "CAMPO RAMON",
+    "color": ""
+  },
+  {
+    "id": 12,
+    "nombre": "CAMPO VIERA",
+    "color": ""
+  },
+  {
+    "id": 13,
+    "nombre": "CANDELARIA",
+    "color": ""
+  },
+  {
+    "id": 14,
+    "nombre": "CAPIOVI",
+    "color": ""
+  },
+  {
+    "id": 15,
+    "nombre": "CARAGUATAY",
+    "color": ""
+  },
+  {
+    "id": 16,
+    "nombre": "CERRO AZUL",
+    "color": ""
+  },
+  {
+    "id": 17,
+    "nombre": "CERRO CORA",
+    "color": ""
+  },
+  {
+    "id": 18,
+    "nombre": "COLONIA ALBERDI",
+    "color": ""
+  },
+  {
+    "id": 19,
+    "nombre": "COLONIA AURORA",
+    "color": ""
+  },
+  {
+    "id": 20,
+    "nombre": "COLONIA DELICIA",
+    "color": ""
+  },
+  {
+    "id": 21,
+    "nombre": "COLONIA POLANA",
+    "color": ""
+  },
+  {
+    "id": 22,
+    "nombre": "COLONIA VICTORIA",
+    "color": ""
+  },
+  {
+    "id": 23,
+    "nombre": "WANDA",
+    "color": ""
+  },
+  {
+    "id": 24,
+    "nombre": "COMANDANTE A. GUACURARY",
+    "color": ""
+  },
+  {
+    "id": 25,
+    "nombre": "CONCEPCION DE LA SIERRA",
+    "color": "GREEN"
+  },
+  {
+    "id": 26,
+    "nombre": "CORPUS",
+    "color": "GREEN"
+  },
+  {
+    "id": 27,
+    "nombre": "DOS ARROYOS",
+    "color": ""
+  },
+  {
+    "id": 28,
+    "nombre": "DOS DE MAYO",
+    "color": ""
+  },
+  {
+    "id": 29,
+    "nombre": "EL ALCAZAR",
+    "color": ""
+  },
+  {
+    "id": 30,
+    "nombre": "ELDORADO",
+    "color": ""
+  },
+  {
+    "id": 31,
+    "nombre": "EL SOBERBIO",
+    "color": "GREEN"
+  },
+  {
+    "id": 32,
+    "nombre": "FACHINAL",
+    "color": ""
+  },
+  {
+    "id": 33,
+    "nombre": "FLORENTINO AMEGHINO",
+    "color": ""
+  },
+  {
+    "id": 34,
+    "nombre": "GARUHAPE",
+    "color": ""
+  },
+  {
+    "id": 35,
+    "nombre": "GARUPA",
+    "color": ""
+  },
+  {
+    "id": 36,
+    "nombre": "GRAL. ALVEAR",
+    "color": ""
+  },
+  {
+    "id": 37,
+    "nombre": "SAN ANTONIO",
+    "color": "GREEN"
+  },
+  {
+    "id": 38,
+    "nombre": "GENERAL J.J. URQUIZA",
+    "color": ""
+  },
+  {
+    "id": 39,
+    "nombre": "GOBERNADOR LOPEZ",
+    "color": ""
+  },
+  {
+    "id": 40,
+    "nombre": "GOBERNADOR ROCA",
+    "color": ""
+  },
+  {
+    "id": 41,
+    "nombre": "GUARANI",
+    "color": ""
+  },
+  {
+    "id": 42,
+    "nombre": "HIPOLITO IRIGOYEN",
+    "color": ""
+  },
+  {
+    "id": 43,
+    "nombre": "ITACARUARE",
+    "color": ""
+  },
+  {
+    "id": 44,
+    "nombre": "JARDIN AMERICA",
+    "color": "GREEN"
+  },
+  {
+    "id": 45,
+    "nombre": "ALEM",
+    "color": ""
+  },
+  {
+    "id": 46,
+    "nombre": "LIBERTAD",
+    "color": ""
+  },
+  {
+    "id": 47,
+    "nombre": "LORETO",
+    "color": ""
+  },
+  {
+    "id": 48,
+    "nombre": "LOS HELECHOS",
+    "color": ""
+  },
+  {
+    "id": 49,
+    "nombre": "MARTIRES",
+    "color": ""
+  },
+  {
+    "id": 50,
+    "nombre": "MOJON GRANDE",
+    "color": ""
+  },
+  {
+    "id": 51,
+    "nombre": "MONTECARLO",
+    "color": ""
+  },
+  {
+    "id": 52,
+    "nombre": "9 DE JULIO",
+    "color": ""
+  },
+  {
+    "id": 53,
+    "nombre": "OBERA",
+    "color": "GREEN"
+  },
+  {
+    "id": 54,
+    "nombre": "OLEGARIO V. ANDRADE",
+    "color": "#ff0000"
+  },
+  {
+    "id": 55,
+    "nombre": "PANAMBI",
+    "color": ""
+  },
+  {
+    "id": 56,
+    "nombre": "POSADAS",
+    "color": "GREEN"
+  },
+  {
+    "id": 57,
+    "nombre": "PROFUNDIDAD",
+    "color": ""
+  },
+  {
+    "id": 58,
+    "nombre": "PUERTO ESPERANZA",
+    "color": ""
+  },
+  {
+    "id": 59,
+    "nombre": "IGUAZU",
+    "color": ""
+  },
+  {
+    "id": 60,
+    "nombre": "LEONI",
+    "color": ""
+  },
+  {
+    "id": 61,
+    "nombre": "PUERTO PIRAY",
+    "color": ""
+  },
+  {
+    "id": 62,
+    "nombre": "PUERTO RICO",
+    "color": ""
+  },
+  {
+    "id": 63,
+    "nombre": "RUIZ DE MONTOYA",
+    "color": ""
+  },
+  {
+    "id": 64,
+    "nombre": "SAN IGNACIO",
+    "color": ""
+  },
+  {
+    "id": 65,
+    "nombre": "SAN JAVIER",
+    "color": ""
+  },
+  {
+    "id": 66,
+    "nombre": "SAN JOSE",
+    "color": ""
+  },
+  {
+    "id": 67,
+    "nombre": "SAN MARTIN",
+    "color": ""
+  },
+  {
+    "id": 68,
+    "nombre": "SAN PEDRO",
+    "color": ""
+  },
+  {
+    "id": 69,
+    "nombre": "SAN VICENTE",
+    "color": ""
+  },
+  {
+    "id": 70,
+    "nombre": "SANTA ANA",
+    "color": ""
+  },
+  {
+    "id": 71,
+    "nombre": "SANTA MARIA",
+    "color": ""
+  },
+  {
+    "id": 72,
+    "nombre": "SANTIAGO DE LINIERS",
+    "color": ""
+  },
+  {
+    "id": 73,
+    "nombre": "SANTO PIPO",
+    "color": ""
+  },
+  {
+    "id": 74,
+    "nombre": "TRES CAPONES",
+    "color": ""
+  },
+  {
+    "id": 75,
+    "nombre": "25 DE MAYO",
+    "color": ""
+  },
+  {
+    "id": 76,
+    "nombre": "POZO AZUL",
+    "color": ""
+  },
+  {
+    "id": 77,
+    "nombre": "SALTO ENCANTADO",
+    "color": ""
+  },
+  {
+    "id": 78,
+    "nombre": "FRACRAN",
+    "color": "#ff0000"
+  }
+]
