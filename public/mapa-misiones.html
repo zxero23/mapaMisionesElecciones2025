@@ -40,6 +40,15 @@
         },
         onEachFeature: (feature, layer) => {
           const nombre = feature.properties?.nombre ?? 'Municipio';
+
+          // Mostrar nombre al pasar el mouse
+          layer.bindTooltip(nombre, {
+            permanent: false,
+            direction: 'top',
+            className: 'leaflet-tooltip'
+          });
+
+          // Popup al hacer clic
           layer.bindPopup(`<h3>${nombre}</h3>`);
         }
       }).addTo(map);
