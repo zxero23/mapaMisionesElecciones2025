@@ -95,10 +95,10 @@
       map.setMaxBounds(bounds);
     });
 
-    // Escuelas con ícono azul (Freepik)
-    fetch('todas_las_escuelas.geojson')
+    // Mostrar escuelas con datos enriquecidos
+    fetch('escuelas.geojson')
       .then(res => res.json())
-      .then(escuelasTodas => {
+      .then(escuelas => {
         const schoolIcon = L.icon({
           iconUrl: 'https://cdn-icons-png.flaticon.com/32/5345/5345428.png',
           iconSize: [20, 20],
@@ -106,17 +106,22 @@
           popupAnchor: [0, -10]
         });
 
-        L.geoJSON(escuelasTodas, {
+        L.geoJSON(escuelas, {
           pointToLayer: (feature, latlng) => {
             return L.marker(latlng, { icon: schoolIcon });
           },
           onEachFeature: (feature, layer) => {
-            const nombre = feature.properties?.nombre ?? 'Escuela';
-            const direccion = feature.properties?.direccion ?? '';
+            const p = feature.properties;
             layer.on('click', () => {
               document.getElementById('sidebar').style.display = 'block';
-              document.getElementById('school-info').innerHTML =
-                `<p><strong>Nombre:</strong> ${nombre}</p><p><strong>Dirección:</strong> ${direccion}</p>`;
+              document.getElementById('school-info').innerHTML = `
+                <p><strong>Nombre:</strong> ${p.nombre ?? ''}</p>
+                <p><strong>Dirección:</strong> ${p.direccion ?? ''}</p>
+                <p><strong>Municipio:</strong> ${p.nombre_municipio ?? ''}</p>
+                <p><strong>Circuito:</strong> ${p.nombre_circuito ?? ''} (${p.codigo_circuito ?? ''})</p>
+                <p><strong>Mesas:</strong> ${p.cant_mesas ?? ''} (${p.desde ?? ''} a ${p.hasta ?? ''})</p>
+                <p><strong>Electores:</strong> ${p.electores ?? ''}</p>               
+              `;
             });
           }
         }).addTo(map);
