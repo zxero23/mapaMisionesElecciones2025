@@ -2,13 +2,54 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Municipios de Misiones con colores</title>
+  <title>Elecciones 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos.css" />
+  <style>
+    #map-container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+    #map {
+      flex: 4;
+    }
+    #sidebar {
+      flex: 1;
+      background-color: #f9f9f9;
+      border-left: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+      display: none;
+      position: relative;
+    }
+    #sidebar h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+    #close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #0077cc;
+    }
+  </style>
 </head>
 <body>
-  <div id="map"></div>
+  <div id="map-container">
+    <div id="map"></div>
+    <div id="sidebar">
+      <button id="close-btn" onclick="document.getElementById('sidebar').style.display = 'none'">✖</button>
+      <h2>Escuela</h2>
+      <div id="school-info">Seleccioná una escuela</div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
@@ -40,15 +81,11 @@
         },
         onEachFeature: (feature, layer) => {
           const nombre = feature.properties?.nombre ?? 'Municipio';
-
-          // Mostrar nombre al pasar el mouse
           layer.bindTooltip(nombre, {
             permanent: false,
             direction: 'top',
             className: 'leaflet-tooltip'
           });
-
-          // Popup al hacer clic
           layer.bindPopup(`<h3>${nombre}</h3>`);
         }
       }).addTo(map);
@@ -57,6 +94,33 @@
       map.fitBounds(bounds);
       map.setMaxBounds(bounds);
     });
+
+    // Escuelas con ícono azul (Freepik)
+    fetch('todas_las_escuelas.geojson')
+      .then(res => res.json())
+      .then(escuelasTodas => {
+        const schoolIcon = L.icon({
+          iconUrl: 'https://cdn-icons-png.flaticon.com/32/5345/5345428.png',
+          iconSize: [20, 20],
+          iconAnchor: [10, 10],
+          popupAnchor: [0, -10]
+        });
+
+        L.geoJSON(escuelasTodas, {
+          pointToLayer: (feature, latlng) => {
+            return L.marker(latlng, { icon: schoolIcon });
+          },
+          onEachFeature: (feature, layer) => {
+            const nombre = feature.properties?.nombre ?? 'Escuela';
+            const direccion = feature.properties?.direccion ?? '';
+            layer.on('click', () => {
+              document.getElementById('sidebar').style.display = 'block';
+              document.getElementById('school-info').innerHTML =
+                `<p><strong>Nombre:</strong> ${nombre}</p><p><strong>Dirección:</strong> ${direccion}</p>`;
+            });
+          }
+        }).addTo(map);
+      });
   </script>
 </body>
 </html>
